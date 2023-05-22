@@ -1,0 +1,25 @@
+<app-header></app-header>
+<section  >
+  <div class="container-content">
+    <div class="container-title">
+      <h3>Minha lista de tarefas</h3>
+    </div>
+    <div class="content-list" [ngClass]="{'isEmptyList': !taskList.length}" >
+      <ul >
+        <li>
+          <div class="container-btn-add-task" *ngFor="let item of taskList; let i =  index">
+            <input type="checkbox" [(ngModel)]="item.checked" >
+            <input type="text" [(ngModel)]="item.description" [ngClass]="{'checked': item.checked}">
+            <button (click)="deleteTask(i)" >delete</button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="btn-add-task">
+        <app-btn-add-task (emitTaskItem)="addItemOnList($event)"></app-btn-add-task>
+        <app-btn-delete *ngIf="taskList.length" (click)="deleteAll()"></app-btn-delete>
+      </div>
+    </div>
+
+  </div>
+</section>

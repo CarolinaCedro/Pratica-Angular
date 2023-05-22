@@ -1,0 +1,42 @@
+<div class="form-container">
+  <form>
+    <h2>Formulario</h2>
+    <fieldset>
+      <label>Nome: </label>
+      <input type="txt" [(ngModel)]="nome" name="nome">
+    </fieldset>
+    <fieldset>
+      <label>email: </label>
+      <input type="email" [(ngModel)]="email" name="email">
+    </fieldset>
+
+    <fieldset>
+      <label>Idade: </label>
+      <input type="number" [(ngModel)]="idade" name="idade">
+    </fieldset>
+
+    <fieldset>
+      <label>Profissão: </label>
+      <input type="text" [(ngModel)]="profissao" name="profissao">
+    </fieldset>
+
+    <fieldset>
+      <label>Cidade: </label>
+      <input type="text" [(ngModel)]="cidade" name="cidade">
+    </fieldset>
+    <div class="isSavedSucess" *ngIf="isSaved">
+      <h3>Usuario criado com sucesso!</h3>
+    </div>
+    <div class="isErrorSaved" *ngIf="isErrorSaved">
+      <h3>Atenção preecha todos os campos antes de enviar !!!</h3>
+    </div>
+    <div class="btn-container">
+      <button (click)="save()">Salvar dados</button>
+    </div>
+  </form>
+
+  <div class="filho">
+    <app-filho-component [usersListItem]="usersList"></app-filho-component>
+  </div>
+
+</div>
