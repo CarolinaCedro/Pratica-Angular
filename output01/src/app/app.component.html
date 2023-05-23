@@ -1,0 +1,12 @@
+<router-outlet></router-outlet>
+<app-component-filho (newItemEvent)="addItemOnTextArea($event)"></app-component-filho>
+
+<div class="box">
+  <div class="containerText">
+    <ul *ngFor="let item of listaItens; let i = index">
+      <li>{{item}}</li>
+    </ul>
+  </div>
+</div>
+
+

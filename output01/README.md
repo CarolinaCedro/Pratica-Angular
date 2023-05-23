@@ -1,0 +1,1 @@
+#### 1.Comunicação entre componentes pai-filho: Crie um projeto com um componente pai e um componente filho. Use o @Output() no componente filho para emitir um evento sempre que um botão for clicado. No componente pai, ouça esse evento e exiba uma mensagem quando o evento for acionado.
